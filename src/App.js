@@ -13,7 +13,7 @@ const styles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '20% auto',
+    margin: '200px auto',
   },
   text: {
     fontSize: 38,
