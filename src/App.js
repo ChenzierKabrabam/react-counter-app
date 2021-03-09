@@ -25,10 +25,6 @@ function App() {
   const classes = styles()
   let [count, setCount] = React.useState(0)
 
-  const formatCount = () => {
-    return count === 0 ? 'Zero' : count
-  }
-
   const handleIncrement = () => {
     setCount(count + 1)
   }
@@ -47,11 +43,16 @@ function App() {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <h1 className={classes.text}>{formatCount()}</h1>
+        <h1 className={classes.text}>{count}</h1>
       </CardContent>
 
       <CardActions>
-        <Fab color='primary' aria-label='add' onClick={handleDecrement}>
+        <Fab
+          aria-label='add'
+          onClick={handleDecrement}
+          color='primary'
+          disabled={count === 0 ? 'disabled' : ''}
+        >
           <AiIcons.AiOutlineMinus />
         </Fab>
 
@@ -63,6 +64,7 @@ function App() {
           variant='extended'
           aria-label='clear'
           color='secondary'
+          disabled={count === 0 ? true : false}
           onClick={handleReset}
         >
           <h2>Reset</h2>
