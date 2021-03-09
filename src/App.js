@@ -8,12 +8,12 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const styles = makeStyles({
   root: {
-    minWidth: 275,
+    minWidth: 230,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '50% auto',
+    margin: '20% auto',
   },
   text: {
     fontSize: 38,
